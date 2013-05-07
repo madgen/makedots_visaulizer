@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="Simple graph interface for segmented least squares micro challenge">
+        <meta name="author" content="Mistral Contrastin">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <h2>Segmented Least Squares Micro challenge</h2>
+        <div id="desc">
+          This is a small application to help you generate data points and visualise line segments for the micro challenge. Good luck!<br>
+          Click on the graph to generate points and copy the data points from the box on the right to your .makedots file.<br>
+          To visualise lines copy and paste the contents of your .makedots-segments file and click generate lines.
+        </div>
+
+        <div id="app">
+          <div id="graph">
+            <div id="y-axis"></div>
+            <div id="x-axis"></div>
+            <div class="cleaner"></div>
+          </div>
+          <div id="input">
+            <div id="dot-coordinates">
+              <h3>Dot coordinates</h3> 
+              <textarea></textarea>
+            </div>
+            <div id="line-params">
+              <h3>Line parameters</h3>
+              <textarea></textarea>
+              <input type="button" id="draw-lines" value="Draw Lines">
+              <input type="button" id="remove-lines" value="Remove Lines">
+            </div>
+            <div id="hl"></div>
+            <input type="button" id="reset" value="Reset Everything">
+          </div>
+        </div>
+
+        <div id="credits">
+          Developed by Mistral Contrastin. You can see the source code <a href="http://www.github.com/madgen">here</a>.
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
