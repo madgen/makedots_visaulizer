@@ -1,5 +1,7 @@
 $(document).ready(function() {
+  gh = $("#graph").height();
   var i = 0;
+
   $("#graph").click(function(e) {
     i += 1;
     var x = Math.round(e.pageX - $("#graph").offset().left);
@@ -11,7 +13,7 @@ $(document).ready(function() {
     if (i != 1) {
       $("#dot-coordinates textarea").append("\n");
     }
-    $("#dot-coordinates textarea").append(x + " " + y);
+    $("#dot-coordinates textarea").append(x + " " + (gh - y));
   });
 
   $("#draw-lines").click(function() {
@@ -28,9 +30,9 @@ $(document).ready(function() {
 
     for(var i = 0; i < lines.length; i++) {
       x1 = lines[i][0];
-      y1 = lines[i][1];
+      y1 = gh - lines[i][1];
       x2 = lines[i][2];
-      y2 = lines[i][3];
+      y2 = gh - lines[i][3];
       if (x2 < x1) {
         temp = y1;
         y1 = y2;
